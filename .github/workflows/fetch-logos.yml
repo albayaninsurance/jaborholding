@@ -15,7 +15,8 @@ jobs:
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36"
           get(){ curl -sSL -A "$UA" -m 30 -o "$1" -w "$1 %{http_code} %{content_type} %{size_download}\n" "$2" || echo "$1 FAILED"; }
           get yloway.html https://yloway.com/
-          get yellow.png https://yloway.com/wp-content/uploads/2025/02/Logo.png
+          get yellow.svg https://yloway.com/logo/logo-yellow.svg
+          get yellow-onblack.svg https://yloway.com/logo/logo-onblack.svg
           get dohabank.png https://www.dohabank.com.qa/wp-content/uploads/sites/12/Doha-Bank-Logo.png
           get aamal.png https://www.aamal.com.qa/sites/aamal/files/aamal/logo/aamal-logo-header-updated.png
           get berkeley.png https://berkeleyqa.com/wp-content/uploads/2022/12/berkerley-web-logo.png
