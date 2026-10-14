@@ -1,0 +1,32 @@
+name: Archive old site
+on:
+  push:
+    branches: [old-site-archive]
+    paths: [.github/workflows/archive-old-site.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Point the domain at the old server
+        run: |
+          echo "104.21.84.161 jaborholding.com www.jaborholding.com" | sudo tee -a /etc/hosts
+      - name: Mirror the old site
+        run: |
+          wget --mirror --page-requisites --convert-links --adjust-extension \
+               --no-parent --restrict-file-names=windows -e robots=off \
+               --wait=0.3 --tries=3 --timeout=30 \
+               --domains=jaborholding.com,www.jaborholding.com \
+               -P old-site https://jaborholding.com/ || true
+          find old-site -type f | sort > old-site/FILES.txt
+          du -sh old-site; wc -l old-site/FILES.txt
+      - name: Commit the copy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add old-site
+          git commit -m "Save a copy of the old jaborholding.com site" || exit 0
+          git push
