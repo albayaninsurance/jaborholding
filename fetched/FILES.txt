@@ -1,8 +1,10 @@
-aamal.png:        PNG image data, 393 x 484, 8-bit colormap, non-interlaced
-berkeley.png:     PNG image data, 400 x 104, 8-bit/color RGBA, non-interlaced
-dohabank.png:     PNG image data, 255 x 84, 8-bit/color RGBA, non-interlaced
-prime.png:        PNG image data, 230 x 60, 8-bit/color RGBA, non-interlaced
-profit.png:       PNG image data, 159 x 62, 8-bit/color RGBA, non-interlaced
-yellow.png:       ASCII text
-yloway-logos.txt: ASCII text
-yloway.html:      HTML document, Unicode text, UTF-8 text, with very long lines (691)
+FILES.txt:          empty
+aamal.png:          PNG image data, 393 x 484, 8-bit colormap, non-interlaced
+berkeley.png:       PNG image data, 400 x 104, 8-bit/color RGBA, non-interlaced
+dohabank.png:       PNG image data, 255 x 84, 8-bit/color RGBA, non-interlaced
+prime.png:          PNG image data, 230 x 60, 8-bit/color RGBA, non-interlaced
+profit.png:         PNG image data, 159 x 62, 8-bit/color RGBA, non-interlaced
+yellow-onblack.svg: SVG Scalable Vector Graphics image
+yellow.svg:         SVG Scalable Vector Graphics image
+yloway-logos.txt:   ASCII text
+yloway.html:        HTML document, Unicode text, UTF-8 text, with very long lines (691)
