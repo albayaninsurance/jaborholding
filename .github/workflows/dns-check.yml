@@ -1,0 +1,17 @@
+name: DNS check
+on:
+  push:
+    branches: [old-site-archive]
+    paths: [.github/workflows/dns-check.yml]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          sudo apt-get install -y -qq dnsutils >/dev/null 2>&1 || true
+          echo "== .com registry delegation"; dig +norec NS jaborholding.com @a.gtld-servers.net | sed -n '/AUTHORITY SECTION/,/^$/p'
+          echo "== GoDaddy A"; dig +short A jaborholding.com @ns15.domaincontrol.com
+          echo "== GoDaddy www"; dig +short CNAME www.jaborholding.com @ns15.domaincontrol.com
+          echo "== public A"; dig +short A jaborholding.com @1.1.1.1; dig +short A jaborholding.com @8.8.8.8
+          echo "== new site via GitHub"; curl -s --resolve jaborholding.com:80:185.199.108.153 http://jaborholding.com/ | grep -o '<title>[^<]*</title>'
+          echo "== https cert"; curl -sv --resolve jaborholding.com:443:185.199.108.153 https://jaborholding.com/ -o /dev/null 2>&1 | grep -E "subject:|issuer:|SSL certificate|HTTP/" | head -5
