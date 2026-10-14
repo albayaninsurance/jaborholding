@@ -17,3 +17,4 @@ jobs:
           echo "== https cert"; curl -sv --resolve jaborholding.com:443:185.199.108.153 https://jaborholding.com/ -o /dev/null 2>&1 | grep -E "subject:|issuer:|SSL certificate verify|HTTP/|expire" | head -6
           echo "== http redirect"; curl -sI --resolve jaborholding.com:80:185.199.108.153 http://jaborholding.com/ | grep -iE "^HTTP|^location"
           echo "== www"; curl -sv --resolve www.jaborholding.com:443:185.199.108.153 https://www.jaborholding.com/ -o /dev/null 2>&1 | grep -E "subject:|issuer:|SSL certificate verify|HTTP/|location" | head -5
+# Wed Oct 14 17:02:02 UTC 2026
