@@ -107,16 +107,16 @@ T = {
 )}
 
 
-# Links and logos for the chairman's roles, aligned with ch_roles order (local files where we have them, otherwise the company's own site)
+# Links and logos for the chairman's roles, aligned with ch_roles order (all kept locally so they load from our own domain)
 ROLE_META = [
- ('https://www.dohabank.com.qa/', ['https://www.dohabank.com.qa/wp-content/uploads/sites/12/Doha-Bank-Logo.png']),
- ('https://www.aamal.com.qa/', ['https://www.aamal.com.qa/sites/aamal/files/aamal/logo/aamal-logo-header-updated.png']),
+ ('https://www.dohabank.com.qa/', ['assets/partners/dohabank.png']),
+ ('https://www.aamal.com.qa/', ['assets/partners/aamal.png']),
  ('https://www.transindgroup.com/', ['assets/logos/transind-holding.webp']),
  ('https://albayaninsurance.com/', ['assets/logos/albayan.webp']),
- ('https://yloway.com/', ['https://yloway.com/wp-content/uploads/2025/02/Logo.png']),
- ('https://berkeleyqa.com/', ['https://berkeleyqa.com/wp-content/uploads/2022/12/berkerley-web-logo.png']),
+ ('https://yloway.com/', ['assets/partners/yellow.svg']),
+ ('https://berkeleyqa.com/', ['assets/partners/berkeley.png']),
  ('https://www.baskinrobbins.com/', ['assets/brands/br.webp','assets/brands/dunkin.webp']),
- ('https://www.primesolutionconsulting.com/', ['https://www.primesolutionconsulting.com/images/logo.png']),
+ ('https://www.primesolutionconsulting.com/', ['assets/partners/prime.png']),
  ('https://www.tiktok.com/@qmax0746', ['assets/partners/qmax.png']),
  (None, []),
  (None, []),
@@ -126,7 +126,7 @@ SUB_NAMES = {'transind-trading':'Transind Trading','transind-logistics':'Transin
 BRANDS = [('coke','Coca-Cola'),('kellogs',"Kellogg's"),('frito-lay','Frito Lay'),('kdd','KDD'),('ulker','Ülker'),('nabati','Nabati'),('lacnor','Lacnor'),('albatal','Al Batal'),('almadina','Al Madina'),('alrabwah','Al Rabwah'),('artemios','Artemios'),('barakat','Barakat'),('budi','Budi'),('darina','Darina'),('domo','Domo'),('ecocare','Eco Care'),('firebull','Fire Bull'),('flamgo','Flamgo'),('kif','KIF'),('lorx','Lorx'),('luna','Luna'),('meo','Me-O'),('mochi','My Mochi'),('montana','Montana'),('mum','MUM'),('nabil','Nabil'),('oman','Oman Chips'),('original','Original'),('shokubutsu','Shokubutsu'),('tuli','Tulip'),('walimah','Al Walimah'),('yaqeen','Al Yaqeen')]
 CO_LOGO = {'bayan':'assets/logos/albayan.webp','transind':'assets/logos/transind-holding.webp',
  'foodpalace':'assets/logos/food-palace.webp',
- 'profit':'https://profitholding.com.qa/wp-content/uploads/2020/01/logo.png','yellow':'https://yloway.com/wp-content/uploads/2025/02/Logo.png'}
+ 'profit':'assets/partners/profit.png','yellow':'assets/partners/yellow.svg'}
 
 def role_li(r, meta):
     url, logos = meta
