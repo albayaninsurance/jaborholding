@@ -119,7 +119,7 @@ ROLE_META = [
  ('https://www.primesolutionconsulting.com/', ['assets/partners/prime.png']),
  ('https://www.tiktok.com/@qmax0746', ['assets/partners/qmax.png']),
  (None, []),
- (None, []),
+ (None, ['assets/partners/alarabi.png']),
 ]
 SUBS = ['transind-trading','transind-logistics','transind-fb','transind-realestate','food-palace','dukkan','qatar-express','transocean','almanzil','clove','balasem','burgerstop','mr-shawarma','pavati','albadia','br','dunkin']
 SUB_NAMES = {'transind-trading':'Transind Trading','transind-logistics':'Transind Logistics','transind-fb':'Transind F&amp;B','transind-realestate':'Transind Real Estate','food-palace':'Food Palace','dukkan':'Dukkan','qatar-express':'Qatar Express','transocean':'Trans Ocean','almanzil':'Al Manzil','clove':'Clove','balasem':'Balasem','burgerstop':'Burger Stop','mr-shawarma':'Mr. Shawarma','pavati':'Pavati','albadia':'Al Badia','br':'Baskin Robbins','dunkin':"Dunkin' Donuts"}
