@@ -231,3 +231,6 @@ html[lang="en"] .qpts b{font-family:var(--en-display); font-size:23px; font-weig
 .co .img img, .co .img .logo-img{width:auto; height:auto; max-width:60%; max-height:56px; object-fit:contain; margin:0; padding:0}
 .co .img:has(img), .co .img:has(.logo-img){background-image:none}
 .qatar blockquote::before{top:-24px; font-size:80px; opacity:.3}
+footer .social{display:flex; gap:16px; flex-wrap:wrap}
+footer .social a{color:var(--gold-soft); text-decoration:none}
+footer .social a:hover{color:#fff}
