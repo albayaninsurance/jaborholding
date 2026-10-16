@@ -13,7 +13,8 @@ jobs:
           echo "== GoDaddy A"; dig +short A jaborholding.com @ns15.domaincontrol.com
           echo "== GoDaddy www"; dig +short CNAME www.jaborholding.com @ns15.domaincontrol.com
           echo "== public A"; dig +short A jaborholding.com @1.1.1.1; dig +short A jaborholding.com @8.8.8.8
-          echo "== new site via GitHub"; curl -s --resolve jaborholding.com:80:185.199.108.153 http://jaborholding.com/ | grep -o '<title>[^<]*</title>'
+          echo "== live page"; curl -s https://jaborholding.com/ | grep -oE '<title>[^<]*</title>|قريباً|رابطة رجال الأعمال|alarabi.png|qba.png' | sort | uniq -c
+          echo "== en"; curl -s -o /dev/null -w "%{http_code}\n" https://jaborholding.com/en.html
           echo "== https cert"; curl -sv --resolve jaborholding.com:443:185.199.108.153 https://jaborholding.com/ -o /dev/null 2>&1 | grep -E "subject:|issuer:|SSL certificate verify|HTTP/|expire" | head -6
           echo "== http redirect"; curl -sI --resolve jaborholding.com:80:185.199.108.153 http://jaborholding.com/ | grep -iE "^HTTP|^location"
           echo "== www"; curl -sv --resolve www.jaborholding.com:443:185.199.108.153 https://www.jaborholding.com/ -o /dev/null 2>&1 | grep -E "subject:|issuer:|SSL certificate verify|HTTP/|location" | head -5
