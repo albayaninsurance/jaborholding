@@ -1,5 +1,6 @@
-# Jabor Holding website
+# jaborholding.com
 
-Static bilingual site for jaborholding.com (Arabic `index.html`, English `en.html`), served by GitHub Pages from the repository root.
+The site is closed for now: this branch only serves a "coming soon" page.
 
-The pages are generated: edit the text in `tools/build_site.py` (and the drawn map and skyline in `tools/art.py`), then run `python3 tools/build_site.py` and commit the regenerated HTML. Styles live in `assets/style.css`.
+The full website (pages, images, and the build scripts in `tools/`) is kept on the
+`full-site` branch. To reopen it, make `main` match `full-site` again.
