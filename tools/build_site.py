@@ -166,7 +166,7 @@ def body(L, k):
 
 <section id="about"><div class="wrap about">
   <div><div class="head"><span class="eyebrow">{L['about_eb']}</span><h2>{L['about_h']}</h2></div>{''.join(f'<p>{p}</p>' for p in L['about_p'])}</div>
-  <div class="facts">{facts}</div>
+  <div><figure class="about-photo"><img src="assets/photos/meeting.webp" alt="" loading="lazy" width="1100" height="732"></figure><div class="facts">{facts}</div></div>
 </div></section>
 
 <section id="qatar" class="qatar"><div class="wrap">
