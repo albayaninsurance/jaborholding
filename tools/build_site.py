@@ -1,8 +1,24 @@
-import os
+import os, json
 from art import SKY, qmap, intro
 D = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root is the published site
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;600&family=IBM+Plex+Sans:wght@400;600&family=Cormorant+Garamond:wght@600&display=swap">'
+
+SITE = 'https://jaborholding.com/'
+# Official social accounts: add each account's full URL here and rerun the build. The footer icons and
+# the search-engine profile links appear only for accounts listed, so nothing shows until they are filled in.
+SOCIAL = [
+  # ('instagram', 'https://www.instagram.com/...'),
+  # ('x', 'https://x.com/...'),
+  # ('linkedin', 'https://www.linkedin.com/company/...'),
+  # ('facebook', 'https://www.facebook.com/...'),
+  # ('youtube', 'https://www.youtube.com/@...'),
+  # ('tiktok', 'https://www.tiktok.com/@...'),
+  # ('snapchat', 'https://www.snapchat.com/add/...'),
+  # ('whatsapp', 'https://wa.me/974...'),
+]
+SOCIAL_NAME = {'instagram':'Instagram','x':'X','linkedin':'LinkedIn','facebook':'Facebook','youtube':'YouTube','tiktok':'TikTok','snapchat':'Snapchat','whatsapp':'WhatsApp'}
+social = lambda: ''.join(f'<a href="{u}" target="_blank" rel="noopener me">{SOCIAL_NAME[n]}</a>' for n, u in SOCIAL)
 
 GATE = '<svg class="gate" viewBox="0 0 120 120" aria-hidden="true"><path d="M22 114 V62 A38 38 0 0 1 98 62 V114 Z" fill="#FAF5EF"/><line x1="60" y1="56" x2="60" y2="84" stroke="#A88A45" stroke-width="10" stroke-linecap="round"/></svg>'
 ICON = {
@@ -206,13 +222,23 @@ def body(L, k):
   <div class="brand">{qmap(L['doha'], L['qatar'])}</div>
 </div></section>
 </main>
-<footer><div class="wrap"><span>© <span class="ltr">2026</span> {L['title'].split('|')[0].strip()}. {L['rights']}.</span><span class="ltr">jaborholding.com</span></div></footer>
+<footer><div class="wrap"><span>© <span class="ltr">2026</span> {L['title'].split('|')[0].strip()}. {L['rights']}.</span>{f'<nav class="social ltr">{social()}</nav>' if SOCIAL else ''}<span class="ltr">jaborholding.com</span></div></footer>
 '''
 
 def head(L, k):
+    url = SITE + ('' if k == 'ar' else 'en.html')
+    name = L['title'].split('|')[0].strip()
+    org = json.dumps({'@context': 'https://schema.org', '@type': 'Organization', 'name': 'Jabor Holding', 'alternateName': 'جبر القابضة',
+                      'url': SITE, 'logo': SITE + 'assets/logo.png', 'sameAs': [u for _, u in SOCIAL]}, ensure_ascii=False)
     return (f'<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<title>{L["title"]}</title><meta name="description" content="{L["desc"]}">'
-            f'<link rel="icon" href="assets/favicon.png">{FONTS}<link rel="stylesheet" href="assets/style.css">')
+            f'<link rel="canonical" href="{url}"><link rel="alternate" hreflang="ar" href="{SITE}"><link rel="alternate" hreflang="en" href="{SITE}en.html"><link rel="alternate" hreflang="x-default" href="{SITE}">'
+            f'<meta property="og:type" content="website"><meta property="og:site_name" content="{name}"><meta property="og:title" content="{L["title"]}">'
+            f'<meta property="og:description" content="{L["desc"]}"><meta property="og:url" content="{url}"><meta property="og:locale" content="{"ar_QA" if k == "ar" else "en_US"}">'
+            f'<meta property="og:image" content="{SITE}assets/share.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+            f'<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#6B1230">'
+            f'<link rel="icon" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/favicon.png">'
+            f'<script type="application/ld+json">{org}</script>{FONTS}<link rel="stylesheet" href="assets/style.css">')
 
 for k, fn in (('ar', 'index.html'), ('en', 'en.html')):
     L = T[k]
