@@ -167,7 +167,7 @@ def body(L, k):
 
 <section id="about"><div class="wrap about">
   <div><div class="head"><span class="eyebrow">{L['about_eb']}</span><h2>{L['about_h']}</h2></div>{''.join(f'<p>{p}</p>' for p in L['about_p'])}</div>
-  <div><figure class="about-photo"><img src="assets/photos/meeting.webp" alt="" loading="lazy" width="1100" height="732"></figure><div class="facts">{facts}</div></div>
+  <div><figure class="about-photo"><img src="assets/photos/zubarah.webp" alt="" loading="lazy" width="1200" height="675"></figure><div class="facts">{facts}</div></div>
 </div></section>
 
 <section id="qatar" class="qatar"><div class="wrap">
@@ -199,6 +199,8 @@ def body(L, k):
   <div><div class="head" style="margin-bottom:18px"><span class="eyebrow">{L['ch_eb']}</span><h2>{L['ch_h']}</h2></div>
     <h3>{L['ch_name']}</h3><div class="role">{L['ch_role']}</div><ul class="roles">{roles}</ul><div class="edu">{edu}</div></div>
 </div></section>
+
+<div class="photo-band" role="img" aria-label="{L['doha']}"></div>
 
 <section id="contact" class="contact"><div class="wrap grid">
   <div><div class="head"><span class="eyebrow" style="color:#D9C38E">{L['ct_eb']}</span><h2>{L['ct_h']}</h2></div><dl>{ct}</dl>
