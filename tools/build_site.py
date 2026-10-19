@@ -46,8 +46,8 @@ T = {
   companies=[
    ('البيان لوساطة التأمين','قطاع التأمين','وسيط تأمين مستقل في قطر يقدم المشورة للأفراد والشركات، ويختار لهم أفضل التغطيات بأسعار تنافسية، ويبني معهم علاقات طويلة قائمة على الثقة.','assets/images/bayan.png','http://www.albayaninsurance.com/'),
    ('ترانسيند القابضة','التوزيع والصناعة','مجموعة شركات يعمل فيها أكثر من ١٥٠٠ موظف، في تجارة الأغذية والضيافة والصناعة والموانئ وإدارة المرافق.','assets/images/transind.jpg','http://www.transindgroup.com/'),
-   ('فود بالاس','التجزئة','أقدم هايبر ماركت في المجموعة، يخدم العائلات في قطر بتشكيلة واسعة من المنتجات.','assets/images/foodpalace.jpg','http://www.foodpalaceqatar.com/'),
-   ('بروفت القابضة','خدمات متنوعة','مجموعة قطرية تأسست عام ٢٠٠٨، تعمل في تأجير السيارات والليموزين والتموين والصيانة والأمن والإعلان وإدارة المرافق.','assets/images/profit%20holding.jpg','https://www.profitholding.com.qa/'),
+   ('فود بالاس','التجزئة','أقدم هايبر ماركت في المجموعة، يخدم العائلات في قطر بتشكيلة واسعة من المنتجات.','assets/images/foodpalace.jpg','https://foodpalaceqatar.com/'),
+   ('بروفت القابضة','خدمات متنوعة','مجموعة قطرية تأسست عام ٢٠٠٨، تعمل في تأجير السيارات والليموزين والتموين والصيانة والأمن والإعلان وإدارة المرافق.','assets/images/profit%20holding.jpg','https://profitholding.com.qa/'),
    ('يلو للنقليات','النقل','شركة قطرية للنقل والخدمات اللوجستية تأسست عام ٢٠٢٠، تقدم حلول نقل مستدامة داخل قطر وخارجها.','assets/images/YellowTransportation.jpg','https://yloway.com/')],
   visit='زيارة الموقع ←',
   br_eb='العلامات', br_h='شركات وعلامات نفخر بها', br_subs='الشركات التابعة لترانسيند القابضة', br_list='علامات نوزّعها في قطر',
@@ -91,8 +91,8 @@ T = {
   companies=[
    ('Al Bayan Insurance Broker','Insurance','An independent insurance broker in Qatar advising individuals and companies, placing the right cover at competitive prices, and building long-term relationships based on trust.','assets/images/bayan.png','http://www.albayaninsurance.com/'),
    ('Transind Holding','Distribution & industry','A group of companies with over 1,500 employees in food trading, hospitality, industry, ports trading and facility management.','assets/images/transind.jpg','http://www.transindgroup.com/'),
-   ('Food Palace','Retail','The group\'s longest-standing hypermarket, serving families in Qatar with a wide range of products.','assets/images/foodpalace.jpg','http://www.foodpalaceqatar.com/'),
-   ('Profit Holding','Diversified services','A Qatari group founded in 2008, active in car rental, limousine, catering, auto repair, security, advertising and facility management.','assets/images/profit%20holding.jpg','https://www.profitholding.com.qa/'),
+   ('Food Palace','Retail','The group\'s longest-standing hypermarket, serving families in Qatar with a wide range of products.','assets/images/foodpalace.jpg','https://foodpalaceqatar.com/'),
+   ('Profit Holding','Diversified services','A Qatari group founded in 2008, active in car rental, limousine, catering, auto repair, security, advertising and facility management.','assets/images/profit%20holding.jpg','https://profitholding.com.qa/'),
    ('Yellow Transportation','Transport','A Qatari logistics company founded in 2020, providing sustainable transport and logistics services in Qatar and abroad.','assets/images/YellowTransportation.jpg','https://yloway.com/')],
   visit='Visit website →',
   br_eb='Brands', br_h='Companies and brands we are proud of', br_subs='Transind Holding subsidiaries', br_list='Brands we distribute in Qatar',
