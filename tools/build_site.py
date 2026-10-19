@@ -155,7 +155,7 @@ def body(L, k):
     ct = ''.join(f'<dt>{a}</dt><dd{" class=ltr" if ltr else ""}>{b}</dd>' for a, b, ltr in L['ct'])
     return intro(L['itag'], L['title'].split('|')[0].strip(), L['skip']) + f'''
 <header class="top"><div class="wrap">
-  <a class="logo" href="#top"><img src="assets/logo.png" alt="{L['title']}" width="500" height="150"></a>
+  <a class="logo" href="#top"><img src="assets/logo.png" alt="{L['title']}" width="1227" height="283"></a>
   <button class="menu-btn" type="button" aria-expanded="false" onclick="var n=document.querySelector('.nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">{L['menu']}</button>
   <nav class="nav">{nav}<a class="lang" href="{L['lang'][0]}">{L['lang'][1]}</a></nav>
 </div></header>
