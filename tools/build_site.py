@@ -53,7 +53,7 @@ T = {
   br_eb='العلامات', br_h='شركات وعلامات نفخر بها', br_subs='الشركات التابعة لترانسيند القابضة', br_list='علامات نوزّعها في قطر',
   ch_eb='رئيس مجلس الإدارة', ch_h='القائد وراء النجاح',
   ch_name='الشيخ جبر بن عبدالرحمن بن محمد بن جبر آل ثاني', ch_role='رئيس مجلس إدارة جبر القابضة',
-  ch_roles=['بنك الدوحة: عضو مجلس الإدارة ورئيس لجنة المخاطر','شركة أعمال: عضو مجلس الإدارة منذ ٢٠١٧','ترانسيند القابضة: نائب رئيس مجلس الإدارة والعضو المنتدب، والشريك المدير في المجموعة وشركاتها التابعة','البيان لوساطة التأمين: المؤسس ورئيس مجلس الإدارة والعضو المنتدب','يلو للنقليات: المؤسس ورئيس مجلس الإدارة','بيركلي للاستشارات والتدريب: المؤسس والشريك المدير','باسكن روبنز: الشريك المدير','دانكن دونتس: الشريك المدير','برايم سوليوشن للاستشارات والتجارة: المؤسس والشريك المدير (التوظيف واستشارات تقنية المعلومات)','كيو آند ماكس (Q&amp;MAX): رئيس مجلس الإدارة لسلسلة من ثلاثة متاجر، كل شي من ١ إلى ٢٠ ريال','رابطة رجال الأعمال القطريين: عضو','جهاز قطر للاستثمار: مدير المشتريات (٢٠٠٩ إلى ٢٠٢٥)','نادي العربي: المدير العام والمدير التنفيذي للنادي سابقًا (٢٠١٦ إلى ٢٠١٩)'],
+  ch_roles=['بنك الدوحة: عضو مجلس الإدارة ورئيس لجنة المخاطر','شركة أعمال: عضو مجلس الإدارة منذ ٢٠١٧','جهاز قطر للاستثمار: مدير المشتريات (٢٠٠٩ إلى ٢٠٢٥)','ترانسيند القابضة: نائب رئيس مجلس الإدارة والعضو المنتدب، والشريك المدير في المجموعة وشركاتها التابعة','البيان لوساطة التأمين: المؤسس ورئيس مجلس الإدارة والعضو المنتدب','يلو للنقليات: المؤسس ورئيس مجلس الإدارة','بيركلي للاستشارات والتدريب: المؤسس والشريك المدير','باسكن روبنز: الشريك المدير','دانكن دونتس: الشريك المدير','برايم سوليوشن للاستشارات والتجارة: المؤسس والشريك المدير (التوظيف واستشارات تقنية المعلومات)','كيو آند ماكس (Q&amp;MAX): رئيس مجلس الإدارة لسلسلة من ثلاثة متاجر، كل شي من ١ إلى ٢٠ ريال','رابطة رجال الأعمال القطريين: عضو','نادي العربي: المدير العام والمدير التنفيذي للنادي سابقًا (٢٠١٦ إلى ٢٠١٩)'],
   edu=[('بكالوريوس','إدارة الأعمال، الجامعة الأوروبية في جنيف'),('دبلوم مهني','الإدارة المالية والمصرفية، الأكاديمية العربية للعلوم المالية والمصرفية'),('برنامج قيادي','برنامج القيادة للمدراء، HEC Paris في الدوحة'),('MCIPS','عضو المعهد المعتمد للمشتريات والتوريد، بريطانيا'),('PMP','محترف إدارة المشاريع، معهد PMI الأمريكي'),('IMC','شهادة إدارة الاستثمار، جمعية CFA البريطانية')],
   ct_eb='تواصل معنا', ct_h='نسعد بتواصلكم',
   ct=[('العنوان','مكتب ١٧، الطابق الثاني، مبنى ٢٥٨، شارع ٢٥٠، إشارة التضامن، الدائري الرابع، الدوحة، قطر',False),
@@ -98,7 +98,7 @@ T = {
   br_eb='Brands', br_h='Companies and brands we are proud of', br_subs='Transind Holding subsidiaries', br_list='Brands we distribute in Qatar',
   ch_eb='Chairman', ch_h='The leader behind the success',
   ch_name='Sheikh Jabor bin Abdulrahman bin Mohamed bin Jabor Al-Thani', ch_role='Chairman, Jabor Holding',
-  ch_roles=['Doha Bank: Board Member and Chair of the Risk Committee','Aamal: Board Member since 2017','Transind Holding: Vice Chairman and Managing Director, and Managing Partner in the group and its subsidiaries','Al Bayan Insurance Broker: Founder, Chairman and Managing Director','Yellow Transportation: Founder and Chairman','Berkeley Consulting (training and education): Founder and Managing Partner','Baskin Robbins: Managing Partner','Dunkin\' Donuts: Managing Partner','Prime Solution Consulting &amp; Trading: Founder and Managing Partner (recruitment and IT consulting)','Q&amp;MAX: Chairman of a chain of three stores, everything from 1 to 20 QAR','Qatari Businessmen Association: Member','Qatar Investment Authority: Procurement Manager (2009 to 2025)','Al Arabi Sports Club: former General Manager and Executive Director of the club (2016 to 2019)'],
+  ch_roles=['Doha Bank: Board Member and Chair of the Risk Committee','Aamal: Board Member since 2017','Qatar Investment Authority: Procurement Manager (2009 to 2025)','Transind Holding: Vice Chairman and Managing Director, and Managing Partner in the group and its subsidiaries','Al Bayan Insurance Broker: Founder, Chairman and Managing Director','Yellow Transportation: Founder and Chairman','Berkeley Consulting (training and education): Founder and Managing Partner','Baskin Robbins: Managing Partner','Dunkin\' Donuts: Managing Partner','Prime Solution Consulting &amp; Trading: Founder and Managing Partner (recruitment and IT consulting)','Q&amp;MAX: Chairman of a chain of three stores, everything from 1 to 20 QAR','Qatari Businessmen Association: Member','Al Arabi Sports Club: former General Manager and Executive Director of the club (2016 to 2019)'],
   edu=[('BBA','Business Administration, European University, Geneva'),('Professional Diploma','Financial Management and Banking, Arab Academy for Banking and Finance'),('Leadership','Leadership Program for Managers, HEC Paris, Doha'),('MCIPS','Member, Chartered Institute of Procurement and Supply, UK'),('PMP','Project Management Professional, PMI, USA'),('IMC','Investment Management Certificate, CFA Society UK')],
   ct_eb='Contact', ct_h='Get in touch',
   ct=[('Address','Office 17, 2nd Floor, Building 258, Street 250, Al Tadamoun Signal, D-Ring Road, Doha, Qatar',False),
@@ -111,6 +111,7 @@ T = {
 ROLE_META = [
  ('https://www.dohabank.com.qa/', ['assets/partners/dohabank.png']),
  ('https://www.aamal.com.qa/', ['assets/partners/aamal.png']),
+ ('https://www.qia.qa/', ['assets/partners/qia.png']),
  ('https://www.transindgroup.com/', ['assets/logos/transind-holding.webp']),
  ('https://albayaninsurance.com/', ['assets/logos/albayan.webp']),
  ('https://yloway.com/', ['assets/partners/yellow.svg']),
@@ -120,7 +121,6 @@ ROLE_META = [
  ('https://www.primesolutionconsulting.com/', ['assets/partners/prime.png']),
  ('https://www.tiktok.com/@qmax0746', ['assets/partners/qmax.png']),
  (None, ['assets/partners/qba.png']),
- ('https://www.qia.qa/', ['assets/partners/qia.png']),
  (None, ['assets/partners/alarabi.png']),
 ]
 SUBS = ['transind-trading','transind-logistics','transind-fb','transind-realestate','food-palace','dukkan','qatar-express','transocean','almanzil','clove','balasem','burgerstop','mr-shawarma','pavati','albadia','br','dunkin']
