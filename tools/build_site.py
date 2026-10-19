@@ -57,7 +57,7 @@ T = {
   edu=[('بكالوريوس','إدارة الأعمال، الجامعة الأوروبية في جنيف'),('دبلوم مهني','الإدارة المالية والمصرفية، الأكاديمية العربية للعلوم المالية والمصرفية'),('برنامج قيادي','برنامج القيادة للمدراء، HEC Paris في الدوحة'),('MCIPS','عضو المعهد المعتمد للمشتريات والتوريد، بريطانيا'),('PMP','محترف إدارة المشاريع، معهد PMI الأمريكي'),('IMC','شهادة إدارة الاستثمار، جمعية CFA البريطانية')],
   ct_eb='تواصل معنا', ct_h='نسعد بتواصلكم',
   ct=[('العنوان','مكتب ١٧، الطابق الثاني، مبنى ٢٥٨، شارع ٢٥٠، إشارة التضامن، الدائري الرابع، الدوحة، قطر',False),
-      ('صندوق البريد','200827',True),('الهاتف','+974 4451 2100',True),('الفاكس','+974 4436 3855',True)],
+      ('صندوق البريد','200827',True),('الهاتف','+974 4451 2100',True),('الفاكس','+974 4436 3855',True),('البريد الإلكتروني','<a href="mailto:info@jaborholding.com">info@jaborholding.com</a>',True)],
   map='افتح الموقع على الخريطة', rights='جميع الحقوق محفوظة',
 ),
 'en': dict(
@@ -102,7 +102,7 @@ T = {
   edu=[('BBA','Business Administration, European University, Geneva'),('Professional Diploma','Financial Management and Banking, Arab Academy for Banking and Finance'),('Leadership','Leadership Program for Managers, HEC Paris, Doha'),('MCIPS','Member, Chartered Institute of Procurement and Supply, UK'),('PMP','Project Management Professional, PMI, USA'),('IMC','Investment Management Certificate, CFA Society UK')],
   ct_eb='Contact', ct_h='Get in touch',
   ct=[('Address','Office 17, 2nd Floor, Building 258, Street 250, Al Tadamoun Signal, D-Ring Road, Doha, Qatar',False),
-      ('PO Box','200827',True),('Phone','+974 4451 2100',True),('Fax','+974 4436 3855',True)],
+      ('PO Box','200827',True),('Phone','+974 4451 2100',True),('Fax','+974 4436 3855',True),('Email','<a href="mailto:info@jaborholding.com">info@jaborholding.com</a>',True)],
   map='Open in Google Maps', rights='All rights reserved',
 )}
 
