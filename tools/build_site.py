@@ -144,8 +144,8 @@ def body(L, k):
     facts = ''.join(f'<div class="fact"><b>{a}</b><span>{b}</span></div>' for a, b in L['facts'])
     secs = ''.join(f'<div class="sector">{icon(i)}<h3>{h}</h3><p>{p}</p></div>' for i, h, p in L['sectors'])
     cos = ''.join(
-        f'<article class="co"><div class="img">' + (f'<img class="logo-img" src="{CO_LOGO[key]}" alt="{n}" loading="lazy" data-alt="{img}" onerror="if(this.dataset.alt){{this.src=this.dataset.alt;this.dataset.alt=\'\';this.className=\'\'}}else this.remove()">' if (key:=next((k for k in CO_LOGO if k in img.lower()),None)) else f'<img src="{img}" alt="{n}" loading="lazy" onerror="this.remove()">') + '</div>'
-        f'<div class="body"><span class="tag">{tag}</span><h3>{n}</h3><p>{p}</p>'
+        f'<article class="co">' + (f'<a class="img" href="{u}" target="_blank" rel="noopener" aria-label="{n}">' if u else '<div class="img">') + (f'<img class="logo-img" src="{CO_LOGO[key]}" alt="{n}" loading="lazy" data-alt="{img}" onerror="if(this.dataset.alt){{this.src=this.dataset.alt;this.dataset.alt=\'\';this.className=\'\'}}else this.remove()">' if (key:=next((k for k in CO_LOGO if k in img.lower()),None)) else f'<img src="{img}" alt="{n}" loading="lazy" onerror="this.remove()">') + ('</a>' if u else '</div>')
+        + f'<div class="body"><span class="tag">{tag}</span><h3>' + (f'<a href="{u}" target="_blank" rel="noopener">{n}</a>' if u else n) + f'</h3><p>{p}</p>'
         + (f'<a class="more" href="{u}" target="_blank" rel="noopener">{L["visit"]}</a>' if u else '') + '</div></article>'
         for n, tag, p, img, u in L['companies'])
     subs = ''.join(f'<li><img src="assets/logos/{s}.webp" alt="{SUB_NAMES[s]}" loading="lazy"></li>' for s in SUBS)
