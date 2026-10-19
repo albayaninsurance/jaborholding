@@ -1,0 +1,28 @@
+name: Fetch QIA logo
+on:
+  push:
+    branches: [old-site-archive]
+    paths: [.github/workflows/fetch-qia.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: old-site-archive }
+      - run: |
+          mkdir -p fetched/qia; cd fetched/qia
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"
+          curl -sL -A "$UA" https://www.qia.qa/en/Pages/default.aspx -o home.html || true
+          curl -sL -A "$UA" https://www.qia.qa/ -o home2.html || true
+          cat home.html home2.html | grep -oiE '(src|href)="[^"]*(logo|Logo|LOGO)[^"]*\.(svg|png|jpg|webp)[^"]*"' | sed -E 's/^(src|href)="//; s/"$//' | sort -u > cands.txt
+          cat cands.txt
+          i=0; while read u; do case "$u" in http*) url="$u";; //*) url="https:$u";; /*) url="https://www.qia.qa$u";; *) url="https://www.qia.qa/$u";; esac; i=$((i+1)); ext="${u##*.}"; ext="${ext%%\?*}"; curl -sL -A "$UA" "$url" -o "cand$i.$ext"; echo "$i $url $(file -b cand$i.$ext | cut -c1-60)"; done < cands.txt
+          curl -sL -A "$UA" "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Qatar_Investment_Authority_logo.svg" -o wiki.svg; file wiki.svg
+          curl -sL -A "$UA" "https://logo.clearbit.com/qia.qa?size=256" -o clearbit.png; file clearbit.png
+          rm -f home.html home2.html
+          ls -la
+      - run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add fetched/qia && git commit -m "Fetch QIA logo candidates" && git push || true
