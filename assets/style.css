@@ -237,3 +237,10 @@ html[lang="en"] .qpts b{font-family:var(--en-display); font-size:23px; font-weig
 .co h3 a:hover{text-decoration:underline; text-underline-offset:6px; text-decoration-thickness:1px}
 a.img{text-decoration:none; cursor:pointer}
 a.img:hover img{transform:scale(1.04); transition:transform .3s}
+.edu-lg{display:flex; align-items:center; height:44px; margin-bottom:10px}
+.edu-lg img{height:100%; width:auto; max-width:100%; object-fit:contain; object-position:center left}
+[dir=rtl] .edu-lg img{object-position:center right}
+.edu-lg i{font-style:normal; font-family:Georgia,'Times New Roman',serif; font-weight:700; font-size:26px; letter-spacing:2px; color:var(--maroon); border:2px solid var(--maroon); padding:0 10px; line-height:38px}
+.cv-btn{display:inline-block; margin-top:22px; padding:13px 26px; background:var(--maroon); color:#fff; text-decoration:none; font-weight:600; font-size:15px; letter-spacing:.2px}
+.cv-btn:hover{background:var(--gold); color:#fff}
+.cv-btn::before{content:"↓"; display:inline-block; margin-inline-end:10px}

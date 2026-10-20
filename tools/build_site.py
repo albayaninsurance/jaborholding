@@ -54,6 +54,7 @@ T = {
   ch_eb='رئيس مجلس الإدارة', ch_h='القائد وراء النجاح',
   ch_name='الشيخ جبر بن عبدالرحمن بن محمد بن جبر آل ثاني', ch_role='رئيس مجلس إدارة جبر القابضة',
   ch_roles=['بنك الدوحة: عضو مجلس الإدارة ورئيس لجنة المخاطر','شركة أعمال: عضو مجلس الإدارة منذ ٢٠١٧','جهاز قطر للاستثمار: مدير المشتريات (٢٠٠٩ إلى ٢٠٢٥)','ترانسيند القابضة: نائب رئيس مجلس الإدارة والعضو المنتدب، والشريك المدير في المجموعة وشركاتها التابعة','البيان لوساطة التأمين: المؤسس ورئيس مجلس الإدارة والعضو المنتدب','يلو للنقليات: المؤسس ورئيس مجلس الإدارة','بيركلي للاستشارات والتدريب: المؤسس والشريك المدير','باسكن روبنز: الشريك المدير','دانكن دونتس: الشريك المدير','برايم سوليوشن للاستشارات والتجارة: المؤسس والشريك المدير (التوظيف واستشارات تقنية المعلومات)','كيو آند ماكس (Q&amp;MAX): رئيس مجلس الإدارة لسلسلة من ثلاثة متاجر، كل شي من ١ إلى ٢٠ ريال','رابطة رجال الأعمال القطريين: عضو منذ ٢٠١٥','نادي السيارات الكلاسيكية القطري: عضو منذ ٢٠١٤','نادي العربي: المدير العام والمدير التنفيذي للنادي سابقًا (٢٠١٦ إلى ٢٠١٩)'],
+  cv='تحميل السيرة الذاتية (PDF)',
   edu=[('بكالوريوس','إدارة الأعمال، الجامعة الأوروبية في جنيف'),('دبلوم مهني','الإدارة المالية والمصرفية، الأكاديمية العربية للعلوم المالية والمصرفية'),('مساعد مالي معتمد','معهد البحوث الدولية (IIR)، دبي'),('برنامج قيادي','برنامج القيادة للمدراء، HEC Paris في الدوحة'),('القيادة الأخلاقية','جامعة كارنيجي ميلون في قطر'),('القيادة التحويلية','برنامج IMD مع جهاز قطر للاستثمار'),('MCIPS','عضو المعهد المعتمد للمشتريات والتوريد، بريطانيا'),('PMP','محترف إدارة المشاريع، معهد PMI الأمريكي'),('CISCM','مدير سلاسل الإمداد الدولية المعتمد، معهد IPSCMI الأمريكي'),('IMC','شهادة إدارة الاستثمار بمستوييها الأول والثاني، جمعية CFA البريطانية'),('FRR','شهادة المخاطر المالية والتنظيم، الجمعية العالمية لمحترفي المخاطر (GARP)')],
   ct_eb='تواصل معنا', ct_h='نسعد بتواصلكم',
   ct=[('العنوان','مكتب ١٧، الطابق الثاني، مبنى ٢٥٨، شارع ٢٥٠، إشارة التضامن، الدائري الرابع، الدوحة، قطر',False),
@@ -99,6 +100,7 @@ T = {
   ch_eb='Chairman', ch_h='The leader behind the success',
   ch_name='Sheikh Jabor bin Abdulrahman bin Mohamed bin Jabor Al-Thani', ch_role='Chairman, Jabor Holding',
   ch_roles=['Doha Bank: Board Member and Chair of the Risk Committee','Aamal: Board Member since 2017','Qatar Investment Authority: Procurement Manager (2009 to 2025)','Transind Holding: Vice Chairman and Managing Director, and Managing Partner in the group and its subsidiaries','Al Bayan Insurance Broker: Founder, Chairman and Managing Director','Yellow Transportation: Founder and Chairman','Berkeley Consulting (training and education): Founder and Managing Partner','Baskin Robbins: Managing Partner','Dunkin\' Donuts: Managing Partner','Prime Solution Consulting &amp; Trading: Founder and Managing Partner (recruitment and IT consulting)','Q&amp;MAX: Chairman of a chain of three stores, everything from 1 to 20 QAR','Qatari Businessmen Association: Member since 2015','Qatari Classic Cars Club: Member since 2014','Al Arabi Sports Club: former General Manager and Executive Director of the club (2016 to 2019)'],
+  cv='Download CV (PDF)',
   edu=[('BBA','Business Administration, European University, Geneva'),('Professional Diploma','Financial Management and Banking, Arab Academy for Banking and Finance'),('Certified Financial Assistant','Institute for International Research, Dubai'),('Leadership','Leadership Program for Managers, HEC Paris, Doha'),('Ethical Leadership','Carnegie Mellon University in Qatar'),('Transformative Leadership','IMD program with Qatar Investment Authority'),('MCIPS','Member, Chartered Institute of Procurement and Supply, UK'),('PMP','Project Management Professional, PMI, USA'),('CISCM','Certified International Supply Chain Manager, IPSCMI, USA'),('IMC','Investment Management Certificate, Levels 1 and 2, CFA Society UK'),('FRR','Certificate in Financial Risk and Regulation, GARP, USA')],
   ct_eb='Contact', ct_h='Get in touch',
   ct=[('Address','Office 17, 2nd Floor, Building 258, Street 250, Al Tadamoun Signal, D-Ring Road, Doha, Qatar',False),
@@ -108,6 +110,7 @@ T = {
 
 
 # Links and logos for the chairman's roles, aligned with ch_roles order (all kept locally so they load from our own domain)
+EDU_LOGOS = ['euruni', 'aabfs', None, 'hec', 'cmuq', 'imd', 'cips', 'pmi', 'ipscmi', 'cfauk', 'garp']
 ROLE_META = [
  ('https://www.dohabank.com.qa/', ['assets/partners/dohabank.png']),
  ('https://www.aamal.com.qa/', ['assets/partners/aamal.png']),
@@ -152,7 +155,8 @@ def body(L, k):
     subs = ''.join(f'<li><img src="assets/logos/{s}.webp" alt="{SUB_NAMES[s]}" loading="lazy"></li>' for s in SUBS)
     brs = ''.join(f'<li><img src="assets/brands/{s}.webp" alt="{n}" loading="lazy"></li>' for s, n in BRANDS)
     roles = ''.join(role_li(r, m) for r, m in zip(L['ch_roles'], ROLE_META))
-    edu = ''.join(f'<div><b>{y}</b>{t}</div>' for y, t in L['edu'])
+    edu = ''.join('<div><span class="edu-lg">' + (f'<img src="assets/edu/{k}.webp" alt="" loading="lazy">' if k else '<i>IIR</i>') + f'</span><b>{y}</b>{t}</div>'
+                  for (y, t), k in zip(L['edu'], EDU_LOGOS))
     ct = ''.join(f'<dt>{a}</dt><dd{" class=ltr" if ltr else ""}>{b}</dd>' for a, b, ltr in L['ct'])
     return intro(L['itag'], L['title'].split('|')[0].strip(), L['skip']) + f'''
 <header class="top"><div class="wrap">
@@ -199,7 +203,7 @@ def body(L, k):
 <section id="chairman" class="alt"><div class="wrap chair">
   <div class="photo"><img src="assets/images/sheikh-img-580x450.jpg" alt="{L['ch_name']}" onerror="this.remove()"></div>
   <div><div class="head" style="margin-bottom:18px"><span class="eyebrow">{L['ch_eb']}</span><h2>{L['ch_h']}</h2></div>
-    <h3>{L['ch_name']}</h3><div class="role">{L['ch_role']}</div><ul class="roles">{roles}</ul><div class="edu">{edu}</div></div>
+    <h3>{L['ch_name']}</h3><div class="role">{L['ch_role']}</div><ul class="roles">{roles}</ul><div class="edu">{edu}</div><a class="cv-btn" href="assets/Jabor_Al_Thani_CV.pdf" download>{L['cv']}</a></div>
 </div></section>
 
 <section id="contact" class="contact"><div class="wrap grid">
