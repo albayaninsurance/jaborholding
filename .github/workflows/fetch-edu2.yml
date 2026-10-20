@@ -1,0 +1,49 @@
+name: Fetch education logos 2
+on:
+  push:
+    branches: [old-site-archive]
+    paths: [.github/workflows/fetch-edu2.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: old-site-archive }
+      - run: |
+          set +e
+          mkdir -p fetched/edu2; cd fetched/edu2
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
+          enwiki(){
+            curl -s -A "$UA" "https://en.wikipedia.org/w/api.php?action=query&format=json&generator=images&gimlimit=50&prop=imageinfo&iiprop=url&redirects=1&titles=$2" | python3 -c "
+          import sys,json
+          d=json.load(sys.stdin)
+          for p in d.get('query',{}).get('pages',{}).values():
+            t=p['title'].lower()
+            if ('logo' in t or 'seal' in t) and 'commons-logo' not in t and 'wiki' not in t:
+              print(p['imageinfo'][0]['url'])" | head -4 | while read u; do n=$(basename "$u" | tr -cd 'A-Za-z0-9._-' | cut -c1-50); curl -sL -A "$UA" "$u" -o "$1-w-$n"; echo "W $1 $u"; done
+          }
+          og(){
+            curl -sL -A "$UA" --max-time 30 "$2" -o page.html; echo "PAGE $1 $(stat -c %s page.html)"
+            grep -oiE '<meta[^>]+og:image[^>]+>' page.html | grep -oiE 'content="[^"]+"' | head -1 | sed -E 's/^content="//; s/"$//' > c.txt
+            grep -oiE '<img[^>]+>' page.html | grep -iE 'logo|brand' | grep -oiE '(src|data-src)="[^" ]+' | head -4 | sed -E 's/^[a-z-]+="//' >> c.txt
+            cat c.txt
+            i=0; while read u; do i=$((i+1)); case "$u" in http*) url="$u";; //*) url="https:$u";; /*) url="$(echo $2 | grep -oE '^https?://[^/]+')$u";; *) url="${2%/}/$u";; esac
+              ext=$(echo "${u%%\?*}" | grep -oE '\.(svg|png|jpg|jpeg|webp|ico)$'); curl -sL -A "$UA" --max-time 20 "$url" -o "$1-og$i$ext"; done < c.txt
+            cp page.html "$1-page.html"; rm -f page.html c.txt
+          }
+          enwiki pmi Project_Management_Institute
+          enwiki garp Global_Association_of_Risk_Professionals
+          enwiki euruni "European_University_(business_school)"
+          enwiki aabfs Arab_Academy_for_Banking_and_Financial_Sciences
+          enwiki cips "Chartered_Institute_of_Procurement_%26_Supply"
+          enwiki iir Informa
+          og pmi https://www.pmi.org/
+          og garp https://www.garp.org/
+          og iir https://www.iirme.com/
+          og iir2 https://www.informaconnect.com/
+          for f in *; do echo "$f $(file -b "$f" | cut -c1-50) $(stat -c %s "$f")"; done
+      - run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add fetched/edu2 && git commit -m "Fetch education logo candidates 2" && git push || true
