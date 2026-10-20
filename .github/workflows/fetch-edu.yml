@@ -1,0 +1,52 @@
+name: Fetch education logos
+on:
+  push:
+    branches: [old-site-archive]
+    paths: [.github/workflows/fetch-edu.yml]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: old-site-archive }
+      - run: |
+          set +e
+          mkdir -p fetched/edu; cd fetched/edu
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
+          wiki(){ # key title
+            j=$(curl -s -A "$UA" "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages&piprop=original&redirects=1&titles=$2")
+            u=$(echo "$j" | python3 -c "import sys,json;d=json.load(sys.stdin);p=list(d['query']['pages'].values())[0];print(p.get('original',{}).get('source',''))" 2>/dev/null)
+            echo "WIKI $1 $2 -> $u"
+            [ -n "$u" ] && curl -sL -A "$UA" "$u" -o "$1-wiki.${u##*.}"
+            # also list logo-ish files on the page
+            curl -s -A "$UA" "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=images&imlimit=50&redirects=1&titles=$2" | python3 -c "import sys,json;d=json.load(sys.stdin);p=list(d['query']['pages'].values())[0];print('\n'.join(i['title'] for i in p.get('images',[]) if 'logo' in i['title'].lower() or 'seal' in i['title'].lower()))" 2>/dev/null | head -4 | while read t; do
+              f=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1].replace('File:','').replace(' ','_')))" "$t")
+              n=$(echo "$f" | tr -cd 'A-Za-z0-9._-' | cut -c1-40)
+              curl -sL -A "$UA" "https://commons.wikimedia.org/wiki/Special:FilePath/$f" -o "$1-c-$n"; echo "  FILE $t"
+            done
+          }
+          site(){ # key url
+            curl -sL -A "$UA" --max-time 30 "$2" -o page.html
+            grep -oiE '<img[^>]+>' page.html | grep -iE 'logo' | grep -oiE '(src|data-src)="[^"]+"' | head -3 | sed -E 's/^[a-z-]+="//; s/"$//' > c.txt
+            grep -oiE '<link[^>]+(icon)[^>]+>' page.html | grep -oiE 'href="[^"]+"' | head -2 | sed -E 's/^href="//; s/"$//' >> c.txt
+            i=0; while read u; do i=$((i+1)); case "$u" in http*) url="$u";; //*) url="https:$u";; /*) url="$(echo $2 | grep -oE '^https?://[^/]+')$u";; *) url="${2%/}/$u";; esac
+              ext=$(echo "${u%%\?*}" | grep -oE '\.(svg|png|jpg|jpeg|webp|ico)$'); curl -sL -A "$UA" --max-time 20 "$url" -o "$1-site$i$ext"; echo "SITE $1 $i $url"; done < c.txt
+            rm -f page.html c.txt
+          }
+          wiki euruni "European_University_(business_school)"; site euruni https://www.euruni.edu/
+          wiki aabfs "Arab_Academy_for_Banking_and_Financial_Sciences"; site aabfs https://www.aabfs.org/
+          site iir https://www.iirme.com/
+          wiki hec "HEC_Paris"; site hec https://www.hec.edu/en
+          wiki cmuq "Carnegie_Mellon_University_in_Qatar"; wiki cmu "Carnegie_Mellon_University"; site cmuq https://www.qatar.cmu.edu/
+          wiki imd "IMD_Business_School"; site imd https://www.imd.org/
+          wiki cips "Chartered_Institute_of_Procurement_%26_Supply"; site cips https://www.cips.org/
+          wiki pmi "Project_Management_Institute"; site pmi https://www.pmi.org/
+          site ipscmi https://ipscmi.org/
+          wiki cfa "CFA_Institute"; site cfauk https://www.cfauk.org/
+          wiki garp "Global_Association_of_Risk_Professionals"; site garp https://www.garp.org/
+          for f in *; do echo "$f $(file -b "$f" | cut -c1-50) $(stat -c %s "$f")"; done
+      - run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add fetched/edu && git commit -m "Fetch education logo candidates" && git push || true
