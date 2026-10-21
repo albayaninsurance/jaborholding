@@ -215,10 +215,30 @@ def body(L, k):
 <footer><div class="wrap"><span>© <span class="ltr">2026</span> {L['title'].split('|')[0].strip()}. {L['rights']}.</span><span class="ltr"><a href="mailto:info@jaborholding.com">info@jaborholding.com</a> · jaborholding.com</span></div></footer>
 '''
 
+# Google Analytics (GA4) and Google Ads. Fill these in and rebuild; empty means no tracking code is added.
+GA_ID = ''          # GA4 Measurement ID, e.g. 'G-XXXXXXXXXX'
+ADS_ID = ''         # Google Ads tag ID, e.g. 'AW-123456789'
+ADS_LABEL = ''      # Google Ads conversion label for a contact click, e.g. 'AbC-dEfGhIjK'
+
+def analytics():
+    ids = [i for i in (GA_ID, ADS_ID) if i]
+    if not ids:
+        return ''
+    cfg = ''.join(f"gtag('config','{i}');" for i in ids)
+    conv = f"if(c)gtag('event','conversion',{{send_to:'{ADS_ID}/{ADS_LABEL}'}});" if ADS_ID and ADS_LABEL else ''
+    # Track contact clicks (email, phone, map, CV download) as GA events and, if set, an Ads conversion.
+    track = ("document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;"
+             "var h=a.getAttribute('href')||'',n='',c=1;"
+             "if(h.indexOf('mailto:')==0)n='email_click';else if(h.indexOf('tel:')==0)n='phone_click';"
+             "else if(a.classList.contains('map'))n='map_click';else if(a.hasAttribute('download')){n='cv_download';c=0}else return;"
+             f"gtag('event',n,{{link_url:h}});{conv}}});")
+    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={ids[0]}"></script>'
+            f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());{cfg}{track}</script>")
+
 def head(L, k):
     return (f'<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<title>{L["title"]}</title><meta name="description" content="{L["desc"]}">'
-            f'<link rel="icon" href="assets/favicon.png">{FONTS}<link rel="stylesheet" href="assets/style.css">')
+            f'<link rel="icon" href="assets/favicon.png">{FONTS}<link rel="stylesheet" href="assets/style.css">{analytics()}')
 
 for k, fn in (('ar', 'index.html'), ('en', 'en.html')):
     L = T[k]
