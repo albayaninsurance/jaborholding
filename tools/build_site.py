@@ -62,18 +62,19 @@ T = {
   companies=[
    ('البيان لوساطة التأمين','قطاع التأمين','وسيط تأمين مستقل في قطر يقدم المشورة للأفراد والشركات، ويختار لهم أفضل التغطيات بأسعار تنافسية، ويبني معهم علاقات طويلة قائمة على الثقة.','assets/images/bayan.png','http://www.albayaninsurance.com/'),
    ('ترانسيند القابضة','التوزيع والصناعة','مجموعة شركات يعمل فيها أكثر من ١٥٠٠ موظف، في تجارة الأغذية والضيافة والصناعة والموانئ وإدارة المرافق.','assets/images/transind.jpg','http://www.transindgroup.com/'),
-   ('فود بالاس','التجزئة','أقدم هايبر ماركت في المجموعة، يخدم العائلات في قطر بتشكيلة واسعة من المنتجات.','assets/images/foodpalace.jpg','http://www.foodpalaceqatar.com/'),
-   ('بروفت القابضة','خدمات متنوعة','مجموعة قطرية تأسست عام ٢٠٠٨، تعمل في تأجير السيارات والليموزين والتموين والصيانة والأمن والإعلان وإدارة المرافق.','assets/images/profit%20holding.jpg','https://www.profitholding.com.qa/'),
+   ('فود بالاس','التجزئة','أقدم هايبر ماركت في المجموعة، يخدم العائلات في قطر بتشكيلة واسعة من المنتجات.','assets/images/foodpalace.jpg','https://foodpalaceqatar.com/'),
+   ('بروفت القابضة','خدمات متنوعة','مجموعة قطرية تأسست عام ٢٠٠٨، تعمل في تأجير السيارات والليموزين والتموين والصيانة والأمن والإعلان وإدارة المرافق.','assets/images/profit%20holding.jpg','https://profitholding.com.qa/'),
    ('يلو للنقليات','النقل','شركة قطرية للنقل والخدمات اللوجستية تأسست عام ٢٠٢٠، تقدم حلول نقل مستدامة داخل قطر وخارجها.','assets/images/YellowTransportation.jpg','https://yloway.com/')],
   visit='زيارة الموقع ←',
   br_eb='العلامات', br_h='شركات وعلامات نفخر بها', br_subs='الشركات التابعة لترانسيند القابضة', br_list='علامات نوزّعها في قطر',
   ch_eb='رئيس مجلس الإدارة', ch_h='القائد وراء النجاح',
   ch_name='الشيخ جبر بن عبدالرحمن بن محمد بن جبر آل ثاني', ch_role='رئيس مجلس إدارة جبر القابضة',
-  ch_roles=['بنك الدوحة: عضو مجلس الإدارة ورئيس لجنة المخاطر','شركة أعمال: عضو مجلس الإدارة منذ ٢٠١٧','ترانسيند القابضة: نائب رئيس مجلس الإدارة والعضو المنتدب، والشريك المدير في المجموعة وشركاتها التابعة','البيان لوساطة التأمين: المؤسس ورئيس مجلس الإدارة والعضو المنتدب','يلو للنقليات: المؤسس ورئيس مجلس الإدارة','بيركلي للاستشارات والتدريب: الشريك المدير','باسكن روبنز ودانكن دونتس: الشريك المدير','برايم سوليوشن للاستشارات والتجارة: الشريك المدير (التوظيف واستشارات تقنية المعلومات)','كيو آند ماكس (Q&amp;MAX): رئيس مجلس الإدارة لسلسلة من ثلاثة متاجر، كل شي من ١ إلى ٢٠ ريال','رابطة رجال الأعمال القطريين: عضو','نادي العربي: المدير العام لفريق كرة القدم سابقًا (٢٠١٦ إلى ٢٠١٩)'],
-  edu=[('بكالوريوس','إدارة الأعمال، الجامعة الأوروبية في جنيف'),('دبلوم مهني','الإدارة المالية والمصرفية، الأكاديمية العربية للعلوم المالية والمصرفية'),('برنامج قيادي','برنامج القيادة للمدراء، HEC Paris في الدوحة'),('MCIPS','عضو المعهد المعتمد للمشتريات والتوريد، بريطانيا'),('PMP','محترف إدارة المشاريع، معهد PMI الأمريكي'),('IMC','شهادة إدارة الاستثمار، جمعية CFA البريطانية')],
+  ch_roles=['بنك الدوحة: عضو مجلس الإدارة ورئيس لجنة المخاطر','شركة أعمال: عضو مجلس الإدارة منذ ٢٠١٧','جهاز قطر للاستثمار: مدير المشتريات (٢٠٠٩ إلى ٢٠٢٥)','ترانسيند القابضة: نائب رئيس مجلس الإدارة والعضو المنتدب، والشريك المدير في المجموعة وشركاتها التابعة','البيان لوساطة التأمين: المؤسس ورئيس مجلس الإدارة والعضو المنتدب','يلو للنقليات: المؤسس ورئيس مجلس الإدارة','بيركلي للاستشارات والتدريب: المؤسس والشريك المدير','باسكن روبنز: الشريك المدير','دانكن دونتس: الشريك المدير','برايم سوليوشن للاستشارات والتجارة: المؤسس والشريك المدير (التوظيف واستشارات تقنية المعلومات)','كيو آند ماكس (Q&amp;MAX): رئيس مجلس الإدارة لسلسلة من ثلاثة متاجر، كل شي من ١ إلى ٢٠ ريال','رابطة رجال الأعمال القطريين: عضو منذ ٢٠١٥','نادي السيارات الكلاسيكية القطري: عضو منذ ٢٠١٤','نادي العربي: المدير العام والمدير التنفيذي للنادي سابقًا (٢٠١٦ إلى ٢٠١٩)'],
+  cv='تحميل السيرة الذاتية (PDF)',
+  edu=[('بكالوريوس','إدارة الأعمال، الجامعة الأوروبية في جنيف'),('دبلوم مهني','الإدارة المالية والمصرفية، الأكاديمية العربية للعلوم المالية والمصرفية'),('مساعد مالي معتمد','معهد البحوث الدولية (IIR)، دبي'),('برنامج قيادي','برنامج القيادة للمدراء، HEC Paris في الدوحة'),('القيادة الأخلاقية','جامعة كارنيجي ميلون في قطر'),('القيادة التحويلية','برنامج IMD مع جهاز قطر للاستثمار'),('MCIPS','عضو المعهد المعتمد للمشتريات والتوريد، بريطانيا'),('PMP','محترف إدارة المشاريع، معهد PMI الأمريكي'),('CISCM','مدير سلاسل الإمداد الدولية المعتمد، معهد IPSCMI الأمريكي'),('IMC','شهادة إدارة الاستثمار بمستوييها الأول والثاني، جمعية CFA البريطانية'),('FRR','شهادة المخاطر المالية والتنظيم، الجمعية العالمية لمحترفي المخاطر (GARP)')],
   ct_eb='تواصل معنا', ct_h='نسعد بتواصلكم',
   ct=[('العنوان','مكتب ١٧، الطابق الثاني، مبنى ٢٥٨، شارع ٢٥٠، إشارة التضامن، الدائري الرابع، الدوحة، قطر',False),
-      ('صندوق البريد','200827',True),('الهاتف','+974 4451 2100',True),('الفاكس','+974 4436 3855',True)],
+      ('صندوق البريد','200827',True),('الهاتف','+974 4451 2100',True),('الفاكس','+974 4436 3855',True),('البريد الإلكتروني','<a href="mailto:info@jaborholding.com">info@jaborholding.com</a>',True)],
   map='افتح الموقع على الخريطة', rights='جميع الحقوق محفوظة',
 ),
 'en': dict(
@@ -107,34 +108,39 @@ T = {
   companies=[
    ('Al Bayan Insurance Broker','Insurance','An independent insurance broker in Qatar advising individuals and companies, placing the right cover at competitive prices, and building long-term relationships based on trust.','assets/images/bayan.png','http://www.albayaninsurance.com/'),
    ('Transind Holding','Distribution & industry','A group of companies with over 1,500 employees in food trading, hospitality, industry, ports trading and facility management.','assets/images/transind.jpg','http://www.transindgroup.com/'),
-   ('Food Palace','Retail','The group\'s longest-standing hypermarket, serving families in Qatar with a wide range of products.','assets/images/foodpalace.jpg','http://www.foodpalaceqatar.com/'),
-   ('Profit Holding','Diversified services','A Qatari group founded in 2008, active in car rental, limousine, catering, auto repair, security, advertising and facility management.','assets/images/profit%20holding.jpg','https://www.profitholding.com.qa/'),
+   ('Food Palace','Retail','The group\'s longest-standing hypermarket, serving families in Qatar with a wide range of products.','assets/images/foodpalace.jpg','https://foodpalaceqatar.com/'),
+   ('Profit Holding','Diversified services','A Qatari group founded in 2008, active in car rental, limousine, catering, auto repair, security, advertising and facility management.','assets/images/profit%20holding.jpg','https://profitholding.com.qa/'),
    ('Yellow Transportation','Transport','A Qatari logistics company founded in 2020, providing sustainable transport and logistics services in Qatar and abroad.','assets/images/YellowTransportation.jpg','https://yloway.com/')],
   visit='Visit website →',
   br_eb='Brands', br_h='Companies and brands we are proud of', br_subs='Transind Holding subsidiaries', br_list='Brands we distribute in Qatar',
   ch_eb='Chairman', ch_h='The leader behind the success',
   ch_name='Sheikh Jabor bin Abdulrahman bin Mohamed bin Jabor Al-Thani', ch_role='Chairman, Jabor Holding',
-  ch_roles=['Doha Bank: Board Member and Chair of the Risk Committee','Aamal: Board Member since 2017','Transind Holding: Vice Chairman and Managing Director, and Managing Partner in the group and its subsidiaries','Al Bayan Insurance Broker: Founder, Chairman and Managing Director','Yellow Transportation: Founder and Chairman','Berkeley Consulting (training and education): Managing Partner','Baskin Robbins and Dunkin\' Donuts: Managing Partner','Prime Solution Consulting &amp; Trading: Managing Partner (recruitment and IT consulting)','Q&amp;MAX: Chairman of a chain of three stores, everything from 1 to 20 QAR','Qatari Businessmen Association: Member','Al Arabi Sports Club: former Managing Director of the football team (2016 to 2019)'],
-  edu=[('BBA','Business Administration, European University, Geneva'),('Professional Diploma','Financial Management and Banking, Arab Academy for Banking and Finance'),('Leadership','Leadership Program for Managers, HEC Paris, Doha'),('MCIPS','Member, Chartered Institute of Procurement and Supply, UK'),('PMP','Project Management Professional, PMI, USA'),('IMC','Investment Management Certificate, CFA Society UK')],
+  ch_roles=['Doha Bank: Board Member and Chair of the Risk Committee','Aamal: Board Member since 2017','Qatar Investment Authority: Procurement Manager (2009 to 2025)','Transind Holding: Vice Chairman and Managing Director, and Managing Partner in the group and its subsidiaries','Al Bayan Insurance Broker: Founder, Chairman and Managing Director','Yellow Transportation: Founder and Chairman','Berkeley Consulting (training and education): Founder and Managing Partner','Baskin Robbins: Managing Partner','Dunkin\' Donuts: Managing Partner','Prime Solution Consulting &amp; Trading: Founder and Managing Partner (recruitment and IT consulting)','Q&amp;MAX: Chairman of a chain of three stores, everything from 1 to 20 QAR','Qatari Businessmen Association: Member since 2015','Qatari Classic Cars Club: Member since 2014','Al Arabi Sports Club: former General Manager and Executive Director of the club (2016 to 2019)'],
+  cv='Download CV (PDF)',
+  edu=[('BBA','Business Administration, European University, Geneva'),('Professional Diploma','Financial Management and Banking, Arab Academy for Banking and Finance'),('Certified Financial Assistant','Institute for International Research, Dubai'),('Leadership','Leadership Program for Managers, HEC Paris, Doha'),('Ethical Leadership','Carnegie Mellon University in Qatar'),('Transformative Leadership','IMD program with Qatar Investment Authority'),('MCIPS','Member, Chartered Institute of Procurement and Supply, UK'),('PMP','Project Management Professional, PMI, USA'),('CISCM','Certified International Supply Chain Manager, IPSCMI, USA'),('IMC','Investment Management Certificate, Levels 1 and 2, CFA Society UK'),('FRR','Certificate in Financial Risk and Regulation, GARP, USA')],
   ct_eb='Contact', ct_h='Get in touch',
   ct=[('Address','Office 17, 2nd Floor, Building 258, Street 250, Al Tadamoun Signal, D-Ring Road, Doha, Qatar',False),
-      ('PO Box','200827',True),('Phone','+974 4451 2100',True),('Fax','+974 4436 3855',True)],
+      ('PO Box','200827',True),('Phone','+974 4451 2100',True),('Fax','+974 4436 3855',True),('Email','<a href="mailto:info@jaborholding.com">info@jaborholding.com</a>',True)],
   map='Open in Google Maps', rights='All rights reserved',
 )}
 
 
 # Links and logos for the chairman's roles, aligned with ch_roles order (all kept locally so they load from our own domain)
+EDU_LOGOS = ['euruni', 'aabfs', None, 'hec', 'cmuq', 'imd', 'cips', 'pmi', 'ipscmi', 'cfauk', 'garp']
 ROLE_META = [
  ('https://www.dohabank.com.qa/', ['assets/partners/dohabank.png']),
  ('https://www.aamal.com.qa/', ['assets/partners/aamal.png']),
+ ('https://www.qia.qa/', ['assets/partners/qia.png']),
  ('https://www.transindgroup.com/', ['assets/logos/transind-holding.webp']),
  ('https://albayaninsurance.com/', ['assets/logos/albayan.webp']),
  ('https://yloway.com/', ['assets/partners/yellow.svg']),
  ('https://berkeleyqa.com/', ['assets/partners/berkeley.png']),
- ('https://www.baskinrobbins.com/', ['assets/brands/br.webp','assets/brands/dunkin.webp']),
+ ('https://www.baskinrobbins.com/', ['assets/brands/br.webp']),
+ ('https://www.dunkindonuts.com/', ['assets/brands/dunkin.webp']),
  ('https://www.primesolutionconsulting.com/', ['assets/partners/prime.png']),
  ('https://www.tiktok.com/@qmax0746', ['assets/partners/qmax.png']),
  (None, ['assets/partners/qba.png']),
+ (None, []),
  (None, ['assets/partners/alarabi.png']),
 ]
 SUBS = ['transind-trading','transind-logistics','transind-fb','transind-realestate','food-palace','dukkan','qatar-express','transocean','almanzil','clove','balasem','burgerstop','mr-shawarma','pavati','albadia','br','dunkin']
@@ -158,18 +164,19 @@ def body(L, k):
     facts = ''.join(f'<div class="fact"><b>{a}</b><span>{b}</span></div>' for a, b in L['facts'])
     secs = ''.join(f'<div class="sector">{icon(i)}<h3>{h}</h3><p>{p}</p></div>' for i, h, p in L['sectors'])
     cos = ''.join(
-        f'<article class="co"><div class="img">' + (f'<img class="logo-img" src="{CO_LOGO[key]}" alt="{n}" loading="lazy" data-alt="{img}" onerror="if(this.dataset.alt){{this.src=this.dataset.alt;this.dataset.alt=\'\';this.className=\'\'}}else this.remove()">' if (key:=next((k for k in CO_LOGO if k in img.lower()),None)) else f'<img src="{img}" alt="{n}" loading="lazy" onerror="this.remove()">') + '</div>'
-        f'<div class="body"><span class="tag">{tag}</span><h3>{n}</h3><p>{p}</p>'
+        f'<article class="co">' + (f'<a class="img" href="{u}" target="_blank" rel="noopener" aria-label="{n}">' if u else '<div class="img">') + (f'<img class="logo-img" src="{CO_LOGO[key]}" alt="{n}" loading="lazy" data-alt="{img}" onerror="if(this.dataset.alt){{this.src=this.dataset.alt;this.dataset.alt=\'\';this.className=\'\'}}else this.remove()">' if (key:=next((k for k in CO_LOGO if k in img.lower()),None)) else f'<img src="{img}" alt="{n}" loading="lazy" onerror="this.remove()">') + ('</a>' if u else '</div>')
+        + f'<div class="body"><span class="tag">{tag}</span><h3>' + (f'<a href="{u}" target="_blank" rel="noopener">{n}</a>' if u else n) + f'</h3><p>{p}</p>'
         + (f'<a class="more" href="{u}" target="_blank" rel="noopener">{L["visit"]}</a>' if u else '') + '</div></article>'
         for n, tag, p, img, u in L['companies'])
     subs = ''.join(f'<li><img src="assets/logos/{s}.webp" alt="{SUB_NAMES[s]}" loading="lazy"></li>' for s in SUBS)
     brs = ''.join(f'<li><img src="assets/brands/{s}.webp" alt="{n}" loading="lazy"></li>' for s, n in BRANDS)
     roles = ''.join(role_li(r, m) for r, m in zip(L['ch_roles'], ROLE_META))
-    edu = ''.join(f'<div><b>{y}</b>{t}</div>' for y, t in L['edu'])
+    edu = ''.join('<div><span class="edu-lg">' + (f'<img src="assets/edu/{k}.webp" alt="" loading="lazy">' if k else '<i>IIR</i>') + f'</span><b>{y}</b>{t}</div>'
+                  for (y, t), k in zip(L['edu'], EDU_LOGOS))
     ct = ''.join(f'<dt>{a}</dt><dd{" class=ltr" if ltr else ""}>{b}</dd>' for a, b, ltr in L['ct'])
     return intro(L['itag'], L['title'].split('|')[0].strip(), L['skip']) + f'''
 <header class="top"><div class="wrap">
-  <a class="logo" href="#top"><img src="assets/logo.png" alt="{L['title']}" width="500" height="150"></a>
+  <a class="logo" href="#top"><img src="assets/logo.png" alt="{L['title']}" width="1227" height="283"></a>
   <button class="menu-btn" type="button" aria-expanded="false" onclick="var n=document.querySelector('.nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">{L['menu']}</button>
   <nav class="nav">{nav}<a class="lang" href="{L['lang'][0]}">{L['lang'][1]}</a></nav>
 </div></header>
@@ -212,7 +219,7 @@ def body(L, k):
 <section id="chairman" class="alt"><div class="wrap chair">
   <div class="photo"><img src="assets/images/sheikh-img-580x450.jpg" alt="{L['ch_name']}" onerror="this.remove()"></div>
   <div><div class="head" style="margin-bottom:18px"><span class="eyebrow">{L['ch_eb']}</span><h2>{L['ch_h']}</h2></div>
-    <h3>{L['ch_name']}</h3><div class="role">{L['ch_role']}</div><ul class="roles">{roles}</ul><div class="edu">{edu}</div></div>
+    <h3>{L['ch_name']}</h3><div class="role">{L['ch_role']}</div><ul class="roles">{roles}</ul><div class="edu">{edu}</div><a class="cv-btn" href="assets/Jabor_Al_Thani_CV.pdf" download>{L['cv']}</a></div>
 </div></section>
 
 <section id="contact" class="contact"><div class="wrap grid">
@@ -221,7 +228,7 @@ def body(L, k):
   <div class="brand">{qmap(L['doha'], L['qatar'])}</div>
 </div></section>
 </main>
-<footer><div class="wrap"><span>© <span class="ltr">2026</span> {L['title'].split('|')[0].strip()}. {L['rights']}.</span>{f'<nav class="social ltr">{social()}</nav>' if SOCIAL else ''}<span class="ltr">jaborholding.com</span></div></footer>
+<footer><div class="wrap"><span>© <span class="ltr">2026</span> {L['title'].split('|')[0].strip()}. {L['rights']}.</span>{f'<nav class="social ltr">{social()}</nav>' if SOCIAL else ''}<span class="ltr"><a href="mailto:info@jaborholding.com">info@jaborholding.com</a> · jaborholding.com</span></div></footer>
 '''
 
 def head(L, k):
