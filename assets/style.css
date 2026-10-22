@@ -245,3 +245,6 @@ a.img:hover img{transform:scale(1.04); transition:transform .3s}
 .cv-btn{display:inline-block; margin-top:22px; padding:13px 26px; background:var(--maroon); color:#fff; text-decoration:none; font-weight:600; font-size:15px; letter-spacing:.2px}
 .cv-btn:hover{background:var(--gold); color:#fff}
 .cv-btn::before{content:"↓"; display:inline-block; margin-inline-end:10px}
+footer .social{display:flex; gap:16px; flex-wrap:wrap}
+footer .social a{color:var(--gold-soft); border:0}
+footer .social a:hover{color:#fff}
