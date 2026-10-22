@@ -119,13 +119,13 @@ ROLE_META = [
  ('https://albayaninsurance.com/', ['assets/logos/albayan.webp']),
  ('https://yloway.com/', ['assets/partners/yellow.svg']),
  ('https://berkeleyqa.com/', ['assets/partners/berkeley.png']),
- ('https://www.baskinrobbins.com/', ['assets/brands/br.webp']),
+ ('https://www.baskinrobbinsmea.com/en/delivery-service/qa/', ['assets/brands/br.webp']),
  ('https://www.dunkindonuts.com/', ['assets/brands/dunkin.webp']),
  ('https://www.primesolutionconsulting.com/', ['assets/partners/prime.png']),
  ('https://www.tiktok.com/@qmax0746', ['assets/partners/qmax.png']),
- (None, ['assets/partners/qba.png']),
+ ('https://qataribusinessmen.org/', ['assets/partners/qba.png']),
  (None, []),
- (None, ['assets/partners/alarabi.png']),
+ ('https://alarabi.qa/', ['assets/partners/alarabi.png']),
 ]
 SUBS = ['transind-trading','transind-logistics','transind-fb','transind-realestate','food-palace','dukkan','qatar-express','transocean','almanzil','clove','balasem','burgerstop','mr-shawarma','pavati','albadia','br','dunkin']
 SUB_NAMES = {'transind-trading':'Transind Trading','transind-logistics':'Transind Logistics','transind-fb':'Transind F&amp;B','transind-realestate':'Transind Real Estate','food-palace':'Food Palace','dukkan':'Dukkan','qatar-express':'Qatar Express','transocean':'Trans Ocean','almanzil':'Al Manzil','clove':'Clove','balasem':'Balasem','burgerstop':'Burger Stop','mr-shawarma':'Mr. Shawarma','pavati':'Pavati','albadia':'Al Badia','br':'Baskin Robbins','dunkin':"Dunkin' Donuts"}
@@ -139,7 +139,8 @@ def role_li(r, meta):
     name, _, rest = r.partition(':')
     imgs = ''.join(f'<img src="{l}" alt="" loading="lazy" onerror="this.remove()">' for l in logos)
     nm = f'<a href="{url}" target="_blank" rel="noopener">{name}</a>' if url else name
-    return f'<li><span class="lg">{imgs}</span><span><b>{nm}</b>{":" if rest else ""}{rest}</span></li>'
+    lg = f'<a class="lg" href="{url}" target="_blank" rel="noopener" aria-label="{name}">{imgs}</a>' if url and logos else f'<span class="lg">{imgs}</span>'
+    return f'<li>{lg}<span><b>{nm}</b>{":" if rest else ""}{rest}</span></li>'
 
 MAP = 'https://www.google.com/maps/search/?api=1&query=Al+Tadamoun+Signal+D-Ring+Road+Doha+Qatar'
 

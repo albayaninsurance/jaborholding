@@ -126,6 +126,7 @@ footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wr
 .roles .lg img{max-height:40px; max-width:100%; object-fit:contain}
 .roles .lg:has(img+img) img{max-width:44px}
 .roles .lg:empty{background:url("symbol.svg") center/26px no-repeat}
+a.lg{transition:opacity .2s} a.lg:hover{opacity:.75}
 .roles b a{color:var(--maroon); text-decoration:none}
 .roles b a:hover{text-decoration:underline}
 .co .img .logo-img{object-fit:contain; padding:28px; background:#fff}
