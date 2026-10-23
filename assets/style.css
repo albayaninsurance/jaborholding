@@ -126,7 +126,7 @@ footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wr
 .roles .lg img{max-height:40px; max-width:100%; object-fit:contain}
 .roles .lg:has(img+img) img{max-width:44px}
 .roles .lg:empty{background:url("symbol.svg") center/26px no-repeat}
-a.lg{transition:opacity .2s} a.lg:hover{opacity:.75}
+a.lg,a.edu-lg{transition:opacity .2s} a.lg:hover,a.edu-lg:hover{opacity:.75}
 .roles b a{color:var(--maroon); text-decoration:none}
 .roles b a:hover{text-decoration:underline}
 .co .img .logo-img{object-fit:contain; padding:28px; background:#fff}
@@ -242,6 +242,3 @@ a.img:hover img{transform:scale(1.04); transition:transform .3s}
 .edu-lg img{height:100%; width:auto; max-width:100%; object-fit:contain; object-position:center left}
 [dir=rtl] .edu-lg img{object-position:center right}
 .edu-lg i{font-style:normal; font-family:Georgia,'Times New Roman',serif; font-weight:700; font-size:26px; letter-spacing:2px; color:var(--maroon); border:2px solid var(--maroon); padding:0 10px; line-height:38px}
-.cv-btn{display:inline-block; margin-top:22px; padding:13px 26px; background:var(--maroon); color:#fff; text-decoration:none; font-weight:600; font-size:15px; letter-spacing:.2px}
-.cv-btn:hover{background:var(--gold); color:#fff}
-.cv-btn::before{content:"↓"; display:inline-block; margin-inline-end:10px}
