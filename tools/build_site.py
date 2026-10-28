@@ -217,13 +217,13 @@ def body(L, k):
   <div class="brand">{qmap(L['doha'], L['qatar'])}</div>
 </div></section>
 </main>
-<footer><div class="wrap"><span>© <span class="ltr">2026</span> {L['title'].split('|')[0].strip()}. {L['rights']}.</span><span class="ltr"><a href="mailto:info@jaborholding.com">info@jaborholding.com</a> · jaborholding.com</span></div></footer>
+<footer><div class="wrap"><a class="foot-logo" href="#top"><img src="assets/logo-on-dark.webp" alt="{L['title']}" width="1200" height="246" loading="lazy"></a><span>© <span class="ltr">2026</span> {L['title'].split('|')[0].strip()}. {L['rights']}.</span><span class="ltr"><a href="mailto:info@jaborholding.com">info@jaborholding.com</a> · jaborholding.com</span></div></footer>
 '''
 
 def head(L, k):
     return (f'<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<title>{L["title"]}</title><meta name="description" content="{L["desc"]}">'
-            f'<link rel="icon" href="assets/favicon.png">{FONTS}<link rel="stylesheet" href="assets/style.css">')
+            f'<link rel="icon" href="assets/favicon.png"><link rel="apple-touch-icon" href="assets/favicon.png">{FONTS}<link rel="stylesheet" href="assets/style.css">')
 
 for k, fn in (('ar', 'index.html'), ('en', 'en.html')):
     L = T[k]

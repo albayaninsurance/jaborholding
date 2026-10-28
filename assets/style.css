@@ -97,7 +97,10 @@ html[lang="en"] .fact b{font-family:var(--en-display); font-size:24px}
 .contact .map:hover{background:var(--maroon-deep)}
 .contact .brand img{width:min(420px,100%)}
 footer{background:var(--maroon-deep); color:#D8C5BE; font-size:13.5px}
-footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; padding-block:16px}
+footer .wrap{display:flex; justify-content:space-between; align-items:center; gap:12px 24px; flex-wrap:wrap; padding-block:16px}
+footer .foot-logo{flex-basis:100%; border:0; padding-block:14px 6px}
+footer .foot-logo img{height:64px; width:auto; max-width:100%}
+footer .foot-logo:hover{opacity:.85}
 
 :focus-visible{outline:2px solid var(--gold); outline-offset:3px}
 
